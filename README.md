@@ -1,4 +1,4 @@
-# 🇧🇷 Brazilian E-commerce ETL Pipeline with Airflow
+# Brazilian E-commerce ETL Pipeline with Airflow
 
 ## 🌟 1. Tổng quan (Overview)
 
@@ -26,8 +26,7 @@ Dự án sử dụng **Docker** để đóng gói toàn bộ môi trường, đ�
 ### 🐳 Môi trường Docker
 Hệ thống bao gồm các container cho Airflow (Webserver, Scheduler, Triggerer), MySQL và Postgres đang chạy ổn định:
 
-![Docker Environment](images/docker_setup.png)
-
+<img width="1917" height="1019" alt="image" src="https://github.com/user-attachments/assets/ec1e70a4-d462-4bfd-be64-5a6735418f2f" />
 ---
 
 ## 🔄 3. Quy trình ETL (The Pipeline Workflow)
@@ -37,7 +36,7 @@ Toàn bộ quy trình được quản lý bởi **Airflow DAG** tên là `main_d
 ### 📊 Luồng xử lý (DAG Graph)
 Dưới đây là sơ đồ thực tế của Pipeline trên giao diện Airflow. Các tác vụ chuyển đổi (Transformation) được xử lý song song để tối ưu hóa hiệu suất:
 
-![Airflow DAG Graph](images/airflow_dag.png)
+<img width="1912" height="939" alt="image" src="https://github.com/user-attachments/assets/995a6414-9336-49cb-be2c-dce01adbbc30" />
 
 **Giải thích các Task:**
 1.  `delete_table`: Xóa dữ liệu cũ để tránh trùng lặp.
@@ -54,7 +53,8 @@ Dữ liệu thô từ các file CSV (Olist dataset) được tải nguyên trạ
 * **Database:** `olist`
 * **Tables:** `olist_customers`, `olist_orders`, `olist_products`, v.v.
 
-![MySQL Staging Data](images/mysql_staging.png)
+<img width="1610" height="752" alt="image" src="https://github.com/user-attachments/assets/2ea32e94-adc0-4efd-ad86-1c858f62240d" />
+
 
 ### 🔵 Giai đoạn 2: Data Warehouse (PostgreSQL)
 Dữ liệu sau khi được làm sạch bằng Python (Pandas) sẽ được mô hình hóa theo dạng **Star Schema** để phục vụ phân tích (Analytics Ready).
@@ -62,30 +62,7 @@ Dữ liệu sau khi được làm sạch bằng Python (Pandas) sẽ được m�
 * **Fact Table:** `fct_orders` (Chứa dữ liệu giao dịch).
 * **Dimension Tables:** `dim_customers`, `dim_products`, `dim_sellers` (Chứa dữ liệu danh mục).
 
-![Postgres Data Warehouse](images/postgres_dwh.png)
-
----
-
-## 🚀 5. Hướng dẫn chạy (How to Run)
-
-1.  **Clone Repository:**
-    ```bash
-    git clone [https://github.com/Khoa-Huynh-212006/Ecom_BRAZILIAN_ETL_WITH_AIRFLOW.git](https://github.com/Khoa-Huynh-212006/Ecom_BRAZILIAN_ETL_WITH_AIRFLOW.git)
-    cd Ecom_BRAZILIAN_ETL_WITH_AIRFLOW
-    ```
-
-2.  **Chuẩn bị Dữ liệu:**
-    Tải các file CSV vào thư mục `dataset/`.
-
-3.  **Khởi chạy Docker:**
-    ```bash
-    docker-compose up -d
-    ```
-
-4.  **Truy cập Airflow:**
-    * URL: `http://localhost:8080`
-    * User/Pass: `airflow` / `airflow`
-    * Trigger DAG `main_dag` để bắt đầu quy trình.
+<img width="1608" height="531" alt="image" src="https://github.com/user-attachments/assets/e0ee231d-f5b4-4701-a3e4-d24bbfc3fce3" />
 
 ---
 *Project by Khoa Huynh - UIT Student*
