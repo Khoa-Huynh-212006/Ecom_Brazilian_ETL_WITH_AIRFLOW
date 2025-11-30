@@ -36,6 +36,10 @@ Toàn bộ quy trình được quản lý bởi **Airflow DAG** tên là `main_d
 ### 📊 Luồng xử lý (DAG Graph)
 Dưới đây là sơ đồ thực tế của Pipeline trên giao diện Airflow. Các tác vụ chuyển đổi (Transformation) được xử lý song song để tối ưu hóa hiệu suất:
 
+
+<img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/521cc2b7-2ccb-41cb-ab22-cd2f39b6d198" />
+
+
 <img width="1914" height="985" alt="image" src="https://github.com/user-attachments/assets/2ae92ae0-5d22-4e60-b6d3-5d9ba6d4c59c" />
 
 **Giải thích các Task:**
