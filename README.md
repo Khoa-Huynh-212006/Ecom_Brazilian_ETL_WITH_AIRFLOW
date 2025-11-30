@@ -60,8 +60,8 @@ Dữ liệu thô từ các file CSV (Olist dataset) được tải nguyên trạ
 ### 🔵 Giai đoạn 2: Data Warehouse (PostgreSQL)
 Dữ liệu sau khi được làm sạch bằng Python (Pandas) sẽ được mô hình hóa theo dạng **Star Schema** để phục vụ phân tích (Analytics Ready).
 * **Schema:** `public`
-* **Fact Table:** `fct_orders` (Chứa dữ liệu giao dịch).
-* **Dimension Tables:** `dim_customers`, `dim_products`, `dim_sellers` (Chứa dữ liệu danh mục).
+* **Fact Table:** `dim_full_orders` (Chứa dữ liệu giao dịch).
+* **Dimension Tables:** `dim_customers`, `dim_products`, `dim_sellers`, `dim_geolocation`, `dim_product_category` (Chứa dữ liệu danh mục).
 
 <img width="1912" height="1077" alt="image" src="https://github.com/user-attachments/assets/2ceddc57-b39a-460d-b41e-f885bb115051" />
 
