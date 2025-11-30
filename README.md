@@ -36,7 +36,7 @@ Toàn bộ quy trình được quản lý bởi **Airflow DAG** tên là `main_d
 ### 📊 Luồng xử lý (DAG Graph)
 Dưới đây là sơ đồ thực tế của Pipeline trên giao diện Airflow. Các tác vụ chuyển đổi (Transformation) được xử lý song song để tối ưu hóa hiệu suất:
 
-<img width="1912" height="939" alt="image" src="https://github.com/user-attachments/assets/995a6414-9336-49cb-be2c-dce01adbbc30" />
+<img width="1914" height="985" alt="image" src="https://github.com/user-attachments/assets/2ae92ae0-5d22-4e60-b6d3-5d9ba6d4c59c" />
 
 **Giải thích các Task:**
 1.  `delete_table`: Xóa dữ liệu cũ để tránh trùng lặp.
@@ -53,7 +53,8 @@ Dữ liệu thô từ các file CSV (Olist dataset) được tải nguyên trạ
 * **Database:** `olist`
 * **Tables:** `olist_customers`, `olist_orders`, `olist_products`, v.v.
 
-<img width="1610" height="752" alt="image" src="https://github.com/user-attachments/assets/2ea32e94-adc0-4efd-ad86-1c858f62240d" />
+<img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/d7f69562-40e7-415d-9ee8-681d7ba81e49" />
+
 
 
 ### 🔵 Giai đoạn 2: Data Warehouse (PostgreSQL)
@@ -62,7 +63,8 @@ Dữ liệu sau khi được làm sạch bằng Python (Pandas) sẽ được m�
 * **Fact Table:** `fct_orders` (Chứa dữ liệu giao dịch).
 * **Dimension Tables:** `dim_customers`, `dim_products`, `dim_sellers` (Chứa dữ liệu danh mục).
 
-<img width="1608" height="531" alt="image" src="https://github.com/user-attachments/assets/e0ee231d-f5b4-4701-a3e4-d24bbfc3fce3" />
+<img width="1912" height="1077" alt="image" src="https://github.com/user-attachments/assets/2ceddc57-b39a-460d-b41e-f885bb115051" />
+
 
 ---
 *Project by Khoa Huynh - UIT Student*
